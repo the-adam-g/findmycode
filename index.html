@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Findmycode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+/* Findmycode - Windows 98 Theme */
+
+:root {
+  --desktop: #008080;
+  --window: #c0c0c0;
+  --blue: #000080;
+  --white: #ffffff;
+  --shadow: #808080;
+  --black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--desktop);
+  color: black;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Main header window */
+
+.header {
+  max-width: 850px;
+  margin: 55px auto 25px;
+  padding: 0 0 25px;
+  background: var(--window);
+
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid #404040;
+  border-bottom: 3px solid #404040;
+
+  box-shadow: 2px 2px 0 black;
+}
+
+/* Windows title bar */
+
+.header::before {
+  content: "Findmycode - Welcome";
+  display: block;
+
+  background: linear-gradient(
+    90deg,
+    #000080,
+    #1084d0
+  );
+
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 10px;
+  margin: 3px 3px 25px;
+}
+
+.header h1 {
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 20px 15px;
+}
+
+.header h2 {
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 20px;
+}
+
+/* Project container */
+
+.projects {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  padding: 20px;
+
+  background: var(--window);
+
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid #404040;
+  border-bottom: 3px solid #404040;
+
+  box-shadow: 2px 2px 0 black;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Project windows */
+
+.project {
+  background: #c0c0c0;
+  padding: 0 12px 16px;
+
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Blue project title bars */
+
+.project h3 {
+  background: #000080;
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+
+  padding: 7px 9px;
+  margin: 4px -8px 20px;
+  width: calc(100% + 16px);
+}
+
+/* Windows 98 buttons */
+
+.project a {
+  display: inline-block;
+  margin-top: auto;
+
+  background: #c0c0c0;
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+
+  padding: 7px 18px;
+
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+
+  box-shadow: 1px 1px 0 black;
+}
+
+.project a:hover {
+  background: #d4d0c8;
+}
+
+.project a:active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  box-shadow: none;
+  transform: translate(1px, 1px);
+}
+
+.project a:focus-visible {
+  outline: 1px dotted black;
+  outline-offset: -5px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .header {
+    margin: 20px 12px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .projects {
+    margin: 0 12px 40px;
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+}
+
+/* Yes, i know all of this CSS is vibe slopped, but i was busy at the time. */
+</style>
+<body>
+  <section class="header">
+    <h1>Findmycode</h1>
+    <h2>A directory of projects created/directed by Adam Gillion</h2>
+  </section>
+  <section class="projects">
+    <section class="project"> 
+      <h3>GISC</h3>
+      <a href="https://gisc.findmycode.org">Visit here</a>
+    </section>
+    <section class="project">
+      <h3>TechDojo revision site</h3>
+      <a href="https://techdojo.findmycode.org">Visit here</a>
+    </section>
+    <section class="project">
+      <h3>H127 Engineering revision tools</h3>
+      <a href="https://h127.findmycode.org">Visit here</a>
+    </section>
+    <section class="project">
+      <h3>WordWeight word comparison tool</h3>
+      <a href="https://wordweight.findmycode.org">Visit here</a>
+    </section>
+  </section>
+</body>
